@@ -77,7 +77,7 @@ if s:extraConceal
     " syntax match hsNiceOperator "*" conceal cchar=★
     syntax match psNiceOperator "`div`" conceal cchar=÷
 
-    syntax match psNiceOperator "<<<" conceal cchar=∘
+    syntax match psNiceOperator "<<<" conceal cchar=·
     " Only replace the dot, avoid taking spaces around.
     "syntax match psNiceOperator /\s\.\s/ms=s+1,me=e-1 conceal cchar=∘
     syntax match psNiceOperator "\.\." conceal cchar=‥

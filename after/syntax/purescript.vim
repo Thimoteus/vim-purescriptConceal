@@ -37,7 +37,6 @@ syntax match psNiceOperator "\<sum\>" conceal cchar=∑
 syntax match psNiceOperator "\<product\>" conceal cchar=∏ 
 syntax match psNiceOperator "\<sqrt\>" conceal cchar=√ 
 syntax match psNiceOperator "\<pi\>" conceal cchar=π
-syntax match psNiceOperator "==" conceal cchar=≡
 syntax match psNiceOperator "\/=" conceal cchar=≠
 syntax match psNiceOperator ">>" conceal cchar=»
 

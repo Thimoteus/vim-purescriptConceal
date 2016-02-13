@@ -70,8 +70,8 @@ if s:extraConceal
     syntax match ps_DeclareFunction /^[a-z_(]\S*\(\s\|\n\)*::/me=e-2 nextgroup=psNiceOperator contains=ps_FunctionName,ps_OpFunctionName
     syntax match psNiceOperator "\:\:" conceal cchar=∷
 
-    syntax match psNiceoperator "++" conceal cchar=⧺
-    syntax match psNiceOperator "\<forall\>" conceal cchar=∀
+    syntax match psNiceoperator "++" conceal cchar=╫
+    syntax match psNiceOperator "forall" conceal cchar=∀
     " the star does not seem so good...
     " syntax match hsNiceOperator "*" conceal cchar=★
     syntax match psNiceOperator "`div`" conceal cchar=÷

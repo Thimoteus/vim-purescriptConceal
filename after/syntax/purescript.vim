@@ -96,6 +96,11 @@ if s:extraConceal
     
     syntax match psNiceOperator "!!" conceal cchar=‼
 
+    " |=
+    syn match Models  /|=/        contains=ModelsL,ModelsR
+    syn match ModelsL   /|/       contained containedin=Models conceal cchar=╞
+    syn match ModelsR   /=/       contained containedin=Models conceal cchar=═
+
     " ->
     syn match MHArrow   /->/       contains=MHArrowM,MHArrowH
     syn match MHArrowM  /-/        contained containedin=MHArrow conceal cchar=-

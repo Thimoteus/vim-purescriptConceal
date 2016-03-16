@@ -67,8 +67,8 @@ if s:extraConceal
     syntax match psNiceOperator ">>>" conceal cchar=⋙
 
     " Redefining to get proper '::' concealing
-    syntax match ps_DeclareFunction /^[a-z_(]\S*\(\s\|\n\)*::/me=e-2 nextgroup=psNiceOperator contains=ps_FunctionName,ps_OpFunctionName
-    syntax match psNiceOperator "\:\:" conceal cchar=∷
+    " syntax match ps_DeclareFunction /^[a-z_(]\S*\(\s\|\n\)*::/me=e-2 nextgroup=psNiceOperator contains=ps_FunctionName,ps_OpFunctionName
+    " syntax match psNiceOperator "\:\:" conceal cchar=∷
 
     syntax match psNiceoperator "++" conceal cchar=╫
     syntax match psNiceOperator "forall" conceal cchar=∀

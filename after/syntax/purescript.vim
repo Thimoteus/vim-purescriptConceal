@@ -4,7 +4,7 @@
 " Author:       Vincent Berthoux <twinside@gmail.com> (original), Thimoteus
 " <thimoteus@teknik.io>
 " Last Change:  2016-02-10
-" Version:      1.0.0
+" Version:      2.0.0
 " Require:
 "   set nocompatible
 "     somewhere on your .vimrc
@@ -26,6 +26,7 @@
 "        let g:no_purescript_conceal = 1
 "  Changelog:
 "   - 1.0: Forked from Twinside/vim-haskellConceal and made basic changes.
+"   - 2.0: Changes for purescript
 "
 if exists('g:no_purescript_conceal') || !has('conceal') || &enc != 'utf-8'
     finish
@@ -38,7 +39,8 @@ syntax match psNiceOperator "\<product\>" conceal cchar=∏
 syntax match psNiceOperator "\<sqrt\>" conceal cchar=√ 
 syntax match psNiceOperator "\<pi\>" conceal cchar=π
 syntax match psNiceOperator "\/=" conceal cchar=≠
-syntax match psNiceOperator ">>" conceal cchar=»
+syntax match psNiceOperator ">>" conceal cchar=≫
+syntax match psNiceOperator "<<" conceal cchar=≪
 
 let s:extraConceal = 1
 " Some windows font don't support some of the characters,

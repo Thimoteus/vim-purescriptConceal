@@ -104,13 +104,15 @@ if s:extraConceal
     syn match ModelsR   /=/       contained containedin=Models conceal cchar=═
 
     " ->
-    syn match MHArrow   /->/       contains=MHArrowM,MHArrowH
-    syn match MHArrowM  /-/        contained containedin=MHArrow conceal cchar=-
-    syn match MHArrowH  /-\@<=>/   contained containedin=MHArrow conceal cchar=→
+    syntax match psNiceOperator "->" conceal cchar=→
+    " syn match MHArrow   /->/       contains=MHArrowM,MHArrowH
+    " syn match MHArrowM  /-/        contained containedin=MHArrow conceal cchar=-
+    " syn match MHArrowH  /-\@<=>/   contained containedin=MHArrow conceal cchar=→
 
+    syntax match psNiceOperator "<-" conceal cchar=←
     " <-
-    syntax match HMArrow   /<\ze-/    contains=HMArrowM,HMArrowH
-    syntax match HMArrowH  /</        contained containedin=HMArrow conceal cchar=←
+    " syntax match HMArrow   /<\ze-/    contains=HMArrowM,HMArrowH
+    " syntax match HMArrowH  /</        contained containedin=HMArrow conceal cchar=←
 
     " =>
     syntax match DMHArrow   /=>/       contains=DMHArrowM,DMHArrowH

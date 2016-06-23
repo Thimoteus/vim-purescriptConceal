@@ -145,16 +145,16 @@ if Cf('A')
     syntax match psNiceOperator "=>" conceal cchar=⇒
     syntax match psNiceOperator "\:\:" conceal cchar=∷
 else
-    syntax match hsLRArrowHead contained ">" conceal cchar= 
-    syntax match hsLRArrowTail contained "-" conceal cchar=→
+    syntax match hsLRArrowTail contained "-" conceal cchar= 
+    syntax match hsLRArrowHead contained ">" conceal cchar=→
     syntax match hsLRArrowFull "->" contains=hsLRArrowHead,hsLRArrowTail
 
-    syntax match hsRLArrowHead contained "<" conceal cchar=←
-    syntax match hsRLArrowTail contained "-" conceal cchar= 
+    syntax match hsRLArrowHead contained "<" conceal cchar= 
+    syntax match hsRLArrowTail contained "-" conceal cchar=←
     syntax match hsRLArrowFull "<-" contains=hsRLArrowHead,hsRLArrowTail
 
-    syntax match hsLRDArrowHead contained ">" conceal cchar= 
-    syntax match hsLRDArrowTail contained "=" conceal cchar=⇒
+    syntax match hsLRDArrowHead contained ">" conceal cchar=⇒
+    syntax match hsLRDArrowTail contained "=" conceal cchar= 
     syntax match hsLRDArrowFull "=>" contains=hsLRDArrowHead,hsLRDArrowTail
 endif
 

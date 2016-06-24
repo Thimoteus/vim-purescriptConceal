@@ -101,6 +101,12 @@ if s:extraConceal
 
     syntax match psNiceOperator "!!" conceal cchar=‼
 
+    " <$>
+    syn match FMap "<$>" contains=FMap1,FMap2,FMap3
+    syn match FMap1 contained "<" conceal
+    syn match FMap2 contained "$" conceal cchar=-
+    syn match FMap3 contained ">" conceal cchar=≻
+
     " |=
     syn match Models  /|=/        contains=ModelsL,ModelsR
     syn match ModelsL   /|/       contained containedin=Models conceal cchar=⊧

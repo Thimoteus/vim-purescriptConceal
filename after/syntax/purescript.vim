@@ -215,9 +215,14 @@ if Cf('b')
 " 'f' option to enable formal (★) right bind concealing
 elseif Cf('f')
     syntax match psLRBind1 contained ">" conceal cchar= 
-    syntax match psLRBind2 contained ">" conceal cchar= 
-    syntax match psLRBind3 contained "=" conceal cchar=
-    syntax match hsLRDArrowFull ">>=" contains=psLRBind1,psLRBind2,psLRBind3
+    syntax match psLRBind2 contained ">" conceal cchar=
+    syntax match psLRBind3 contained "=" conceal cchar= 
+    syntax match psRLBindFull ">>=" contains=psLRBind1,psLRBind2,psLRBind3
+
+    syntax match psRLBind1 contained "=" conceal cchar= 
+    syntax match psRLBind2 contained "<" conceal cchar=
+    syntax match psRLBind3 contained "<" conceal cchar= 
+    syntax match psLRBindFull "=<<" contains=psLRBind1,psLRBind2,psLRBind3
 " " 'c' option to enable encircled b/d (ⓑ/ⓓ) for right and left binds.
 " elseif Cf('c')
 "     syntax match psNiceOperator ">>="    conceal cchar=ⓑ

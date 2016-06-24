@@ -217,7 +217,7 @@ elseif Cf('f')
     syntax match psLRBind1 contained ">" conceal cchar= 
     syntax match psLRBind2 contained ">" conceal cchar=
     syntax match psLRBind3 contained "=" conceal cchar= 
-    syntax match psRLBindFull ">>=" contains=psLRBind1,psLRBind2,psLRBind3
+    syntax match psLRBindFull ">>=" contains=psLRBind1,psLRBind2,psLRBind3
 
     syntax match psRLBind1 contained "=" conceal cchar= 
     syntax match psRLBind2 contained "<" conceal cchar=

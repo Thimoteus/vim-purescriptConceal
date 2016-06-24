@@ -222,7 +222,7 @@ elseif Cf('f')
     syntax match psRLBind1 contained "=" conceal cchar= 
     syntax match psRLBind2 contained "<" conceal cchar=
     syntax match psRLBind3 contained "<" conceal cchar= 
-    syntax match psLRBindFull "=<<" contains=psLRBind1,psLRBind2,psLRBind3
+    syntax match psRLBindFull "=<<" contains=psRLBind1,psRLBind2,psRLBind3
 " " 'c' option to enable encircled b/d (ⓑ/ⓓ) for right and left binds.
 " elseif Cf('c')
 "     syntax match psNiceOperator ">>="    conceal cchar=ⓑ

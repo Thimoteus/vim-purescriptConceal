@@ -221,9 +221,9 @@ elseif Cf('c')
     syntax match psNiceOperator "=<<"    conceal cchar=ⓓ
 " 'h' option to enable partial concealing of binds (e.g. »=).
 elseif Cf('h')
-    syntax match psNiceOperator ">>"     conceal cchar=»
-    syntax match psNiceOperator "<<"     conceal cchar=«
-    syntax match psNiceOperator "=\zs<<" conceal cchar=«
+    syntax match psNiceOperator ">>"     conceal cchar=≫
+    syntax match psNiceOperator "<<"     conceal cchar=≪
+    syntax match psNiceOperator "=\zs<<" conceal cchar=≪
 " Left and right arrows with hooks are the default option for binds.
 else
     syntax match psNiceOperator ">>=\ze\_[[:alpha:][:space:]_()[\]]" conceal cchar=↪

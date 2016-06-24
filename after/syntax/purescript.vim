@@ -221,7 +221,7 @@ elseif Cf('f')
 
     " =<<
     syn match DMTTArrow    /=<</      contains=DMTTArrowT,DMTTArrowTT,DMTTArrowM
-    syn match DMTTArrowM   /=/        contained containedin=DMTTArrow conceal cchar=
+    syn match DMTTArrowM   /=/        contained containedin=DMTTArrow conceal cchar=
     syn match DMTTArrowT   /</        contained containedin=DMTTArrow conceal cchar= 
     syn match DMTTArrowTT  /<\@<=</   contained containedin=DMTTArrow conceal cchar=
 " " 'c' option to enable encircled b/d (ⓑ/ⓓ) for right and left binds.

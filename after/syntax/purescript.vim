@@ -225,16 +225,23 @@ elseif Cf('f')
     syn match DMTTArrowT   /</        contained containedin=DMTTArrow conceal cchar= 
     syn match DMTTArrowTT  /<\@<=</   contained containedin=DMTTArrow conceal cchar=
     " >=>
-    syntax match DTMHArrow   />=>/      contains=DTMHArrowT,DTMHArrowM,DTMHArrowH
-    syntax match DTMHArrowT  />/        contained containedin=DTMHArrow conceal cchar= 
-    syntax match DTMHArrowM  /=/        contained containedin=DTMHArrow conceal cchar=
-    syntax match DTMHArrowH  /=\@<=>/   contained containedin=DTMHArrow conceal cchar= 
+    syntax match DTMHArrowT  />/        contained containedin=DTMHArrow conceal cchar=
+    syntax match DTMHArrowM  /=/        contained containedin=DTMHArrow conceal cchar==
+    syntax match DTMHArrowH  /=\@<=>/   contained containedin=DTMHArrow conceal cchar=⇒
+    " syntax match DTMHArrow   />=>/      contains=DTMHArrowT,DTMHArrowM,DTMHArrowH
+    " syntax match DTMHArrowT  />/        contained containedin=DTMHArrow conceal cchar= 
+    " syntax match DTMHArrowM  /=/        contained containedin=DTMHArrow conceal cchar=
+    " syntax match DTMHArrowH  /=\@<=>/   contained containedin=DTMHArrow conceal cchar= 
 
     " <=<
-    syntax match DHMTArrow   "<=<"      contains=DHMTArrowM,DHMTArrowH,DHMTArrowT
-    syntax match DHMTArrowH  "<"        contained containedin=DHMTArrow conceal cchar= 
-    syntax match DHMTArrowM  "="        contained containedin=DHMTArrow conceal cchar= 
-    syntax match DHMTArrowT  "=\@<=<"   contained containedin=DHMTArrow conceal cchar= 
+    syn match DMTTArrow    /=<</      contains=DMTTArrowT,DMTTArrowTT,DMTTArrowM
+    syn match DMTTArrowM   /=/        contained containedin=DMTTArrow conceal cchar==
+    syn match DMTTArrowT   /</        contained containedin=DMTTArrow conceal cchar=
+    syn match DMTTArrowTT  /<\@<=</   contained containedin=DMTTArrow conceal cchar=
+    " syntax match DHMTArrow   "<=<"      contains=DHMTArrowM,DHMTArrowH,DHMTArrowT
+    " syntax match DHMTArrowH  "<"        contained containedin=DHMTArrow conceal cchar= 
+    " syntax match DHMTArrowM  "="        contained containedin=DHMTArrow conceal cchar= 
+    " syntax match DHMTArrowT  "=\@<=<"   contained containedin=DHMTArrow conceal cchar= 
 " " 'c' option to enable encircled b/d (ⓑ/ⓓ) for right and left binds.
 " elseif Cf('c')
 "     syntax match psNiceOperator ">>="    conceal cchar=ⓑ

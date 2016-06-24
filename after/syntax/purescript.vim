@@ -218,8 +218,6 @@ elseif Cf('f')
     syntax match psLRBind2 contained ">" conceal cchar= 
     syntax match psLRBind3 contained "=" conceal cchar=
     syntax match hsLRDArrowFull ">>=" contains=psLRBind1,psLRBind2,psLRBind3
-
-    syntax match psNiceOperator ">>="    conceal cchar=★
 " " 'c' option to enable encircled b/d (ⓑ/ⓓ) for right and left binds.
 " elseif Cf('c')
 "     syntax match psNiceOperator ">>="    conceal cchar=ⓑ

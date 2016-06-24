@@ -29,7 +29,7 @@
 
 " Cf - check a flag. Return true if the flag is specified.
 function! Cf(flag)
-    return exists('g:hscoptions') && stridx(g:hscoptions, a:flag) >= 0
+    return exists('g:psconcealopts') && stridx(g:psconcealopts, a:flag) >= 0
 endfunction
 
 if exists('g:no_purescript_conceal') || !has('conceal') || &enc != 'utf-8'
@@ -73,10 +73,10 @@ if s:extraConceal
     syntax match psNiceOperator ">=\ze[^>]" conceal cchar=≥
 
     " Redfining to get proper '::' concealing
-    syntax match hs_DeclareFunction /^[a-z_(]\S*\(\s\|\n\)*::/me=e-2 nextgroup=psNiceOperator contains=hs_FunctionName,hs_OpFunctionName
+    syntax match ps_DeclareFunction /^[a-z_(]\S*\(\s\|\n\)*::/me=e-2 nextgroup=psNiceOperator contains=ps_FunctionName,ps_OpFunctionName
 
-    syntax match hsNiceoperator "!!" conceal cchar=‼
-    syntax match hsNiceoperator "++\ze[^+]" conceal cchar=⧺
+    syntax match psNiceOperator "!!" conceal cchar=‼
+    syntax match psNiceOperator "++\ze[^+]" conceal cchar=⧺
     syntax match psNiceOperator "\<forall\>" conceal cchar=∀
     syntax match psNiceOperator "-<" conceal cchar=↢
     syntax match psNiceOperator ">-" conceal cchar=↣

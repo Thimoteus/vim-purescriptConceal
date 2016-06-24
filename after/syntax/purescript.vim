@@ -236,7 +236,7 @@ if !Cf('h')
 endif
 
 " 'C' option to enable encircled 'm' letter ⓜ concealing for map.
-if Cf('C')
+if Cf('F')
     syntax match psNiceOperator "<$>"    conceal cchar=ⓜ
     syntax match psNiceOperator "`map`" conceal cchar=ⓜ
 " 'l' option to disable fmap/lift concealing with ↥.

@@ -103,7 +103,7 @@ if s:extraConceal
 
     " <$>
     syn match FMap "<$>" contains=FMap1,FMap2,FMap3
-    syn match FMap1 contained "<" conceal
+    syn match FMap1 contained "<" conceal cchar=-
     syn match FMap2 contained /\$/ conceal cchar=-
     syn match FMap3 contained ">" conceal cchar=≻
 

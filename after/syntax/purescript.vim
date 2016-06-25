@@ -141,60 +141,33 @@ if s:extraConceal
     syntax match HMArrow   /<\ze-/    contains=HMArrowM,HMArrowH
     syntax match HMArrowH  /</        contained containedin=HMArrow conceal cchar=←
 
-    if Cf('c')
     " =>
-      syntax match DMHArrow   /=>/       contains=DMHArrowM,DMHArrowH
-      syntax match DMHArrowM  /=/        contained containedin=DMHArrow conceal cchar=
-      syntax match DMHArrowH  /=\@<=>/   contained containedin=DMHArrow conceal cchar=⇒
-    else
-      syntax match DMHArrow   /=>/       contains=DMHArrowM,DMHArrowH
-      syntax match DMHArrowM  /=/        contained containedin=DMHArrow conceal cchar==
-      syntax match DMHArrowH  /=\@<=>/   contained containedin=DMHArrow conceal cchar=⇒
-    endif
+    syntax match DMHArrow   /=>/       contains=DMHArrowM,DMHArrowH
+    syntax match DMHArrowM  /=/        contained containedin=DMHArrow conceal cchar==
+    syntax match DMHArrowH  /=\@<=>/   contained containedin=DMHArrow conceal cchar=⇒
 
     " >>=
     syntax match DTTMArrow   />>\ze=/   contains=DTTMArrowT,DTTMArrowTT
     syntax match DTTMArrowTT />/        contained containedin=DTTMArrow conceal cchar=
     syntax match DTTMArrowT  />\@<=>/   contained containedin=DTTMArrow conceal cchar=
 
-    if Cf('c')
     " >=>
-      syntax match DTMHArrow   />=>/      contains=DTMHArrowT,DTMHArrowM,DTMHArrowH
-      syntax match DTMHArrowT  />/        contained containedin=DTMHArrow conceal cchar=
-      syntax match DTMHArrowM  /=/        contained containedin=DTMHArrow conceal cchar=
-      syntax match DTMHArrowH  /=\@<=>/   contained containedin=DTMHArrow conceal cchar=⇒
-    else
-      syntax match DTMHArrow   />=>/      contains=DTMHArrowT,DTMHArrowM,DTMHArrowH
-      syntax match DTMHArrowT  />/        contained containedin=DTMHArrow conceal cchar=
-      syntax match DTMHArrowM  /=/        contained containedin=DTMHArrow conceal cchar==
-      syntax match DTMHArrowH  /=\@<=>/   contained containedin=DTMHArrow conceal cchar=⇒
-    endif
+    syntax match DTMHArrow   />=>/      contains=DTMHArrowT,DTMHArrowM,DTMHArrowH
+    syntax match DTMHArrowT  />/        contained containedin=DTMHArrow conceal cchar=
+    syntax match DTMHArrowM  /=/        contained containedin=DTMHArrow conceal cchar==
+    syntax match DTMHArrowH  /=\@<=>/   contained containedin=DTMHArrow conceal cchar=⇒
 
-    if Cf('c')
     " <=<
-      syntax match DHMTArrow   "<=<"      contains=DHMTArrowM,DHMTArrowH,DHMTArrowT
-      syntax match DHMTArrowH  "<"        contained containedin=DHMTArrow conceal cchar=⇐
-      syntax match DHMTArrowM  "="        contained containedin=DHMTArrow conceal cchar=
-      syntax match DHMTArrowT  "=\@<=<"   contained containedin=DHMTArrow conceal cchar=
-    else 
-      syntax match DHMTArrow   "<=<"      contains=DHMTArrowM,DHMTArrowH,DHMTArrowT
-      syntax match DHMTArrowH  "<"        contained containedin=DHMTArrow conceal cchar=⇐
-      syntax match DHMTArrowM  "="        contained containedin=DHMTArrow conceal cchar==
-      syntax match DHMTArrowT  "=\@<=<"   contained containedin=DHMTArrow conceal cchar=
-    endif
+    syntax match DHMTArrow   "<=<"      contains=DHMTArrowM,DHMTArrowH,DHMTArrowT
+    syntax match DHMTArrowH  "<"        contained containedin=DHMTArrow conceal cchar=⇐
+    syntax match DHMTArrowM  "="        contained containedin=DHMTArrow conceal cchar==
+    syntax match DHMTArrowT  "=\@<=<"   contained containedin=DHMTArrow conceal cchar=
 
-    if Cf('c')
     " =<<
-      syn match DMTTArrow    /=<</      contains=DMTTArrowT,DMTTArrowTT,DMTTArrowM
-      syn match DMTTArrowM   /=/        contained containedin=DMTTArrow conceal cchar=
-      syn match DMTTArrowT   /</        contained containedin=DMTTArrow conceal cchar=
-      syn match DMTTArrowTT  /<\@<=</   contained containedin=DMTTArrow conceal cchar=
-    else
-      syn match DMTTArrow    /=<</      contains=DMTTArrowT,DMTTArrowTT,DMTTArrowM
-      syn match DMTTArrowM   /=/        contained containedin=DMTTArrow conceal cchar==
-      syn match DMTTArrowT   /</        contained containedin=DMTTArrow conceal cchar=
-      syn match DMTTArrowTT  /<\@<=</   contained containedin=DMTTArrow conceal cchar=
-    endif
+    syn match DMTTArrow    /=<</      contains=DMTTArrowT,DMTTArrowTT,DMTTArrowM
+    syn match DMTTArrowM   /=/        contained containedin=DMTTArrow conceal cchar==
+    syn match DMTTArrowT   /</        contained containedin=DMTTArrow conceal cchar=
+    syn match DMTTArrowTT  /<\@<=</   contained containedin=DMTTArrow conceal cchar=
 
     " -<
     syn match MTArrow   /-</       contains=MTArrowT,MTArrowM

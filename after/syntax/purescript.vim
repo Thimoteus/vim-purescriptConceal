@@ -107,6 +107,7 @@ if s:extraConceal
     if Cf('c')
       syn match Append "<>" contains=Append1
       syn match Append1 contained "<" conceal cchar=
+    endif
 
     " <$>
     if Cf('f')

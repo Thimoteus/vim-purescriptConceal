@@ -65,6 +65,8 @@ endif
 
 if s:extraConceal
     syntax match psNiceOperator "\<undefined\>" conceal cchar=⊥
+    syntax match psNiceOperator "\<mempty\>" conceal cchar=∅
+    syntax match psNiceOperator "\<empty\>" conceal cchar=∅
 
     " Match greater than and lower than w/o messing with Kleisli composition
     syntax match psNiceOperator "<=\ze[^<]" conceal cchar=≤

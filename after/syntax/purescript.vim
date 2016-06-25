@@ -114,6 +114,13 @@ if s:extraConceal
       syn match FMap3 contained ">" conceal cchar=≻
     endif
 
+    " $>
+    if Cf('c')
+      syn match VoidRight "<$" contains=VoidRight1,VoidRight2
+      syn match VoidRight contained "<" conceal cchar=
+      syn match VoidRight2 contained /\$/ conceal cchar=$
+    endif
+
     " <|
     syntax match psNiceOperator "<|" conceal cchar=⊲
 

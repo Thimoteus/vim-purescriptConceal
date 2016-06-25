@@ -130,11 +130,7 @@ if s:extraConceal
     endif
 
     " <|>
-    if Cf('c')
-      syn match Alt "<|>" contains=Alt1,Alt2
-      syn match Alt1 "<" conceal cchar=
-      syn match Alt2 "|" conceal cchar=∣
-    endif
+    syntax match psNiceOperator "<|>" conceal cchar=⋎
 
     " <|
     syntax match psNiceOperator "<|\ze[^>]" conceal cchar=⊲

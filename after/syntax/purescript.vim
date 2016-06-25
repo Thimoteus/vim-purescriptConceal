@@ -117,7 +117,7 @@ if s:extraConceal
     " $>
     if Cf('c')
       syn match VoidRight "<$" contains=VoidRight1,VoidRight2
-      syn match VoidRight contained "<" conceal cchar=
+      syn match VoidRight1 contained "<" conceal cchar=
       syn match VoidRight2 contained /\$/ conceal cchar=$
     endif
 

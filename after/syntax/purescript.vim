@@ -102,7 +102,7 @@ if s:extraConceal
     syntax match psNiceOperator "!!" conceal cchar=‼
 
     " <$>
-    if Cf('c')
+    if Cf('f')
       syn match FMap "<$>" contains=FMap1,FMap2,FMap3
       syn match FMap1 contained "<" conceal cchar=
       syn match FMap2 contained /\$/ conceal cchar=$
@@ -114,8 +114,8 @@ if s:extraConceal
       syn match FMap3 contained ">" conceal cchar=≻
     endif
 
-    " $>
-    if Cf('c')
+    " <$
+    if Cf('f')
       syn match VoidRight "<$" contains=VoidRight1,VoidRight2
       syn match VoidRight1 contained "<" conceal cchar=
       syn match VoidRight2 contained /\$/ conceal cchar=$

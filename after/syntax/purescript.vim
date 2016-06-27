@@ -109,6 +109,12 @@ if s:extraConceal
       syn match Append1 contained "<" conceal cchar=
     endif
 
+    " |->
+    syn match AMap "|->" contains=AMap1,AMap2,AMap3
+    syn match AMap1 contained "|" conceal cchar=⊦
+    syn match AMap2 contained /-/ conceal cchar=-
+    syn match AMap3 contained ">" conceal cchar=→
+
     " <$>
     if Cf('f')
       syn match FMap "<$>" contains=FMap1,FMap2,FMap3
